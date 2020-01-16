@@ -72,6 +72,10 @@ public class AuctionService {
             comparator = Comparator.comparing(Auction::getTitle);
         } else if(sort.equals("price")) {
             comparator = Comparator.comparing(Auction::getPrice);
+        } else if (sort.equals("color")){
+            comparator = Comparator.comparing(Auction::getColor);
+        } else if (sort.equals("endDate")) {
+            comparator = Comparator.comparing(Auction::getEndDate);
         }
 
         return auctions.stream()
